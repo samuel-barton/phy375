@@ -1,0 +1,43 @@
+	\section*{Problem 2}
+	
+	Let us consider the Fresnel equation for the reflective coefficient for perpendicular light
+	
+	\begin{equation} \label{r-per}
+		\mathrm{r}_{\bot} = 
+		\dfrac{n_i \cos \theta_i - n_t \cos \theta_t}{n_i \cos \theta_i + n_t \cos \theta_t}
+	\end{equation}
+	\\
+	From Snell's Law we know that $n_i \sin \theta_i = n_t \sin \theta_t$. Now if we multiply equation 
+	\ref{r-per} by $ \frac{n_i \sin \theta_i}{n_i \sin \theta_i} $, which we can do since it is just a fancy 
+	reprisentation of 1, we can get both the numerator and denominator in a more useful form. 
+	
+	\begin{equation} \label{r-per-2}
+		\mathrm{r}_{\bot} = \dfrac{n_i \sin \theta_i}{n_i \sin \theta_i} \times \Big(
+		\dfrac{n_i \cos \theta_i - n_t \cos \theta_t}{n_i \cos \theta_i + n_t \cos \theta_t} \Big) = 
+		\dfrac{n^2_i \sin \theta_i \cos \theta_i - n_i n_t \sin \theta_i \cos \theta_t}
+		{n^2_i \sin \theta_i \cos \theta_i + n_i n_t \sin \theta_i \cos \theta_t}
+	\end{equation}
+	\\
+	Now, since $n_i \sin \theta_i = n_t \sin \theta_t$ we can replace $n_i \sin \theta_i$ with $n_t \sin \theta_t$ in equation \ref{r-per-2} to get 
+	
+	\begin{equation}
+		\mathrm{r}_{\bot} = 
+		\dfrac{n_i n_t \sin \theta_t \cos \theta_i - n_i n_t \sin \theta_i \cos \theta_t}
+		{n_i n_t \sin \theta_t \cos \theta_i + n_i n_t \sin \theta_i \cos \theta_t}
+	\end{equation}
+	\\
+	If we use the trigonometric identity that says $\sin(a \pm b) = \sin a \cos b \pm \cos a \sin b$ we can see
+	that the equation above will become 
+	
+	\begin{equation} \label{r-per-4}
+		\mathrm{r}_{\bot} = 
+		\dfrac{\sin(\theta_t - \theta_i)}{\sin(\theta_t + \theta_i)}
+	\end{equation}
+	\\
+	Since addition is reflexive, aka $a + b = b + a$, and $\sin(-\theta) = - \sin{\theta}$ we can rewrite 
+	equation \ref{r-per-4} in the desired form of 
+	
+	\begin{equation*}
+		\mathrm{r}_{\bot} = 
+		- \,\dfrac{\sin(\theta_i - \theta_t)}{\sin(\theta_i + \theta_t)}
+	\end{equation*}

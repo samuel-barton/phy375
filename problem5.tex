@@ -1,0 +1,30 @@
+\section*{Problem 5}
+
+We now consider why a fish, or any observer underwater, will see a cone-framed image of what is above the
+surface surrounded by darkness. Let us first remember Snell's Law which states that 
+$$n_i\sin\theta_i = n_t\sin\theta_t$$
+Using Snell's Law we can define the Crittical angle for the transmission between two medii as the angle 
+$\theta_c$ such that $\sin\theta_c = 1 \implies \theta_c = \frac{\pi}{2}$. If we use this definition in
+conjunction with Snell's law we can get an expression for $\theta_c$ between any two medii
+
+\begin{equation*}
+	n_i\sin\theta_c = n_t\sin(\frac{\pi}{2}) = n_t 
+	\implies \sin\theta_c = \frac{n_t}{n_i} 
+	\implies \theta_c = \sin^{-1}\left(\frac{n_t}{n_i} \right)
+\end{equation*}
+\\
+We can use this in the case of water and air, noting that $n_{\mathrm{water}} = 1.3374$ and 
+$n_{\mathrm{air}} = 1.0028$, to find the crittical angle where we have total internal reflection. The reason
+why this angle defines the cone seen from underwater, it's twice this angle but that's beside the point, is
+that light incident on the water at any angle greater than $0^\circ$ relative to the origin will have
+a transmitted portion in the water, and since there can be no light coming from the surface at less than 
+$0^\circ$ the crittical angle defines the bound of the cone of light. So the $180^\circ$ hemisphere above the
+water is compressed down into a cone whose angle is twice $\theta_c$. The reason why the area outside the 
+cone is so dark is taht it is lit only by that light which reflects off the surface of the water from below and
+comes back down, so it must be much darker as there are no light sources of great magnitude, or any amazing mirrors underwater. 
+\\
+\\
+The angle $\theta_c$ for water to air is $\sin^{-1}\left(\frac{1.0028}{1.3374}\right) = 48.57^\circ$. This
+means that the angle of the cone will be 
+$$\theta_{\mathrm{cone}} = 2 \times \theta_c = 97.15^\circ$$
+

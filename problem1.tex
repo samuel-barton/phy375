@@ -1,0 +1,72 @@
+	\section*{Problem 1}
+	
+	Let us consider light travelling through air ($n_{\mathrm{air}} = 1.00$)  hitting a glass surface ($n_{\mathrm{glass}} = 1.60$) with an incident angle
+	$\theta_i = 30^{\circ}$. 
+	
+	\subsection*{Part a}
+	
+	We are now to calculate the reflection and transmission coefficients for both p-polarized and s-polarized light.
+	\\
+	\\
+	First we have the equations for the reflection coefficients
+	
+	\begin{equation} \label{r_par}
+		\mathrm{r}_\parallel = \dfrac{\tan (\theta_i - \theta_t)}{\tan (\theta_i + \theta_t)}
+	\end{equation}
+	
+	\begin{equation} \label{r_per}
+		\mathrm{r}_\bot = -\dfrac{\sin (\theta_i - \theta_t)}{\sin (\theta_i + \theta_t)}
+	\end{equation}
+	\\
+	Then we have the equations for the transmission coeffiients
+	
+	\begin{equation} \label{t_par}
+		\mathrm{t}_\parallel = \dfrac{2\sin\theta_t\cos\theta_i}{\sin(\theta_i + \theta_t)}
+	\end{equation}
+	
+	\begin{equation} \label{t_per}
+		\mathrm{t}_\bot = \dfrac{2\sin\theta_t\cos\theta_i}{\sin(\theta_i + \theta_t)\cos(\theta_i - \theta_t)}
+	\end{equation}
+	\\
+	Using these four equations we can now calculate all the values for both types of light incident on the glass. Before we continue though, we need
+	to calculate the value of $\theta_t$. We can find this easily enough using Snell's Law
+	\begin{equation*}
+		n_i \sin \theta_i = n_t \sin \theta_t \; \implies 
+		\; \sin \theta_t = \dfrac{n_i \sin\theta_i}{n_t} \; \implies 
+		\; \theta_t = \sin^{-1}\Big(\dfrac{n_i \sin\theta_i}{n_t}\Big)
+	\end{equation*}
+	
+	If we insert the known values, namely $n_i$, $n_t$, and $\theta_i$ we can calculate $\theta_t$.
+	\begin{equation*}
+		\theta_t = \sin^{-1}\Big(\dfrac{\sin (30^\circ)}{1.60}\Big) = 18.2^\circ
+	\end{equation*}
+	Now that we have a value for $\theta_t$ we can now calculate the four values for the reflection and transmission coefficients. First we'll 
+	consider the two values for p-polarized light using equations \ref{r_par} and \ref{t_par}. 
+	
+	\begin{equation*}
+		\mathrm{r}_\parallel = \dfrac{\tan (30^\circ - 18.2^\circ)}{\tan (30^\circ + 18.2^\circ)} = 
+		\dfrac{\tan (11.8^\circ)}{\tan (48.2^\circ)} = \dfrac{0.209}{1.118} = 0.187
+	\end{equation*}
+	and
+	\begin{equation*}
+		\mathrm{t}_\parallel = \dfrac{2\sin(18.2^\circ)\cos(30^\circ)}{\sin(30^\circ + 18.2^\circ)} =
+		\dfrac{2\sin(18.2^\circ)\cos(30^\circ)}{\sin(48.2^\circ)} = \dfrac{2 \times 0.312 \times 0.866}{0.745} = 0.725 
+	\end{equation*}
+	\\
+	Now on to the s-polarized light where we'll use equations \ref{r_per} and \ref{t_per}
+	\begin{equation*}
+		\mathrm{r}_\bot = -\dfrac{\sin (30^\circ - 18.2^\circ)}{\sin (30^\circ + 18.2^\circ)} = 
+		-\dfrac{\sin (11.8^\circ)}{\sin (48.2^\circ)} = -\dfrac{0.204}{0.745} = -0.274 
+	\end{equation*}
+	and
+	\begin{equation*}
+		\mathrm{t}_\bot = \dfrac{2\sin18.2^\circ\cos30^\circ}{\sin(30^\circ + 18.2^\circ)\cos(30^\circ - 18.2^\circ)} = 
+		\dfrac{2\sin18.2^\circ\cos30^\circ}{\sin(48.2^\circ)\cos(11.8^\circ)} = 
+		\dfrac{2 \times 0.312 \times 0.866}{0.745 \times 0.979} = 0.741
+	\end{equation*}
+	
+	This gives us the following four values
+	$$ \mathrm{r}_\parallel = 0.187 $$
+	$$ \mathrm{t}_\parallel = 0.725 $$
+	$$ \mathrm{r}_\bot = -0.274 $$
+	$$ \mathrm{t}_\bot = 0.741 $$

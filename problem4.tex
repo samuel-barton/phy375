@@ -1,0 +1,156 @@
+\section*{Problem 4}
+
+Let us consider the case of a laser whose radius $r = 1\mathrm{mm}$ which carries a power $P = 6\mathrm{KW}$. We note now that this would be one insanely pwerful laser, and we will leave it to the end of the problem to calculate it's power relative to say, the Death Star. 
+\\
+\\
+First, we must consider the equations which should be brought to bear on this problem.
+
+\begin{equation*}
+	I = \langle \, \vec{s} \, \rangle = 
+	\dfrac{\mathrm{Power}}{\mathrm{Area}} = 
+	\left(\dfrac{\epsilon_0 \,E_0^2}{2}\right)c \; \; \; \; \mathrm{and} \; \; \; \; B = \dfrac{E}{c}
+\end{equation*}
+\\
+Since Area is $A = \pi \,r^2 = \pi \, (1\times10^{-3}\,\mathrm{m})^2 = \pi \times 10^{-6}\,\mathrm{m}^2$, we can now calculate $I$ using the above 
+relation.
+
+\begin{equation*}
+	I = \dfrac{P}{A} = \dfrac{6\times 10^3\,W}{\pi \times 10^{-6}\, \mathrm{m}^2} = \dfrac{6}{\pi}\, \times 10^9\, \dfrac{W}{\mathrm{m}^2} = 
+	1.91 \times 10^9 \, \dfrac{W}{\mathrm{m}^2}
+\end{equation*}
+\\
+With our value for $I = 1.91 \times 10^9 \, \frac{W}{\mathrm{m}^2}$ now calculated, we can return to our set of useful equations to find out what the electric and magnetic fields of the laser beam are. First we will deal with the electric field.
+
+\begin{equation*}
+	I = \left(\dfrac{\epsilon_0 \,E_0^2}{2}\right)c = 1.91 \times 10^9 \, \frac{W}{\mathrm{m}^2}
+\end{equation*}
+\\
+When we solve this equation for $E_0$ we get 
+
+\begin{equation*}
+	E_0 = \sqrt{\frac{2 \times 1.91 \times 10^9 \, \frac{W}{\mathrm{m}^2}}{\epsilon_0 \, c}} =
+	\sqrt{\frac{2 \times 1.91 \times 10^9 \, 
+		  \frac{W}{\mathrm{m}^2}}{8.854 \times 10^{-12} \frac{C^2\,s^2}{kg\,\mathrm{m}^3} \, c \, \frac{\mathrm{m}}{s}}} 
+	= 1.199 \times 10^6 \dfrac{\;\;\;\;\dfrac{\sqrt{W}}{\mathrm{m}}\;\;\;\;}{\dfrac{C \sqrt{s}}{\sqrt{kg} \mathrm{m}}}
+\end{equation*}
+\\
+Now to validate our answer we will do dimensional analysis on the units of our electric field to validate that they indeed are $\frac{N}{C}$.
+
+\begin{equation*}
+	\dfrac{\;\;\;\;\dfrac{\sqrt{W}}{\mathrm{m}}\;\;\;\;}{\dfrac{C \sqrt{s}}{\sqrt{kg} \mathrm{m}}} = 
+	\dfrac
+	{
+		\;\;
+		\dfrac
+		{
+			\;
+			\sqrt
+			{
+				\dfrac
+				{
+					kg\mathrm{m}^2
+				}
+				{
+					s^3
+				}
+			}
+			\;
+		}
+		{
+			\mathrm{m}
+		}
+		\;\;
+	}
+	{
+		\dfrac
+		{
+			C \sqrt{s}
+		}
+		{
+			\sqrt{kg} \mathrm{m}
+		}
+	} 
+	= 
+	\dfrac
+	{
+		\;\;
+		\dfrac
+		{
+			\sqrt{kg}
+		}
+		{
+			s
+			\sqrt{s}
+		}
+		\;\;
+	}
+	{
+		\dfrac
+		{
+			C \sqrt{s}
+		}
+		{
+			\sqrt{kg} \mathrm{m}
+		}
+	} 
+	=
+	\dfrac
+	{
+		\sqrt{kg}
+	}
+	{
+		s
+		\sqrt{s}
+	}
+	\times
+	\dfrac
+	{
+		\sqrt{kg} \mathrm{m}
+	}
+	{
+		C \sqrt{s}
+	}
+	=
+	\dfrac
+	{
+		kg
+		\mathrm{m}
+	}
+	{
+		C
+		s^2
+	}
+	=
+	\dfrac{N}{C}
+\end{equation*}
+
+Thus we can be assured that the value of $E_0$ is correct, or at least that it has correct units.
+\\
+\\ 
+Now on to calculating the value of $B_0$. Again, we go back to our set of useful equations and see that $B_0 = \frac{E_0}{c}$. Thus all we must 
+do is divide our answer for $E_0$ by $c$ to get the value of $B_0$.
+
+\begin{equation*}
+		E_0 = 1.199 \times 10^6 \dfrac{N}{C} \; \; \; \mathrm{and}\; \mathrm{so} \;\;\; B_0 = \dfrac{1.199 \times 10^6}{c} = 
+		4\times 10^{-3} \dfrac{N}{C \frac{\mathrm{m}}{s}} = 
+		4\times 10^{-3} \dfrac{N \,s}{C \,\mathrm{m}} = 
+		4 mT
+\end{equation*}
+\\
+We now have the value for both the electric and magnetic field, along with the irradiance of the laser. 
+\\
+\\
+As promised we will now compare the value of the irradiance to what would be emitted by the death star. The Death Star was able to destroy an Earth-sized planet in a few seconds, and since the binding energy of the earth is $2.24\times 10^{32}$ Joules we are going to estimate that it took the Death Star 10 esconds to destroy the planet. This gives us a power value for the laser emitted by the Death Star of $2.24 \times 10^{31}$ Watts. Let us assume that the laser beam emitted by the Death Star is 100m wide, and so we can calculate the surface area of the laser as
+$$A_{\mathrm{death}\;\mathrm{star}} = \pi (100\mathrm{m})^2 = 10000\pi\, \mathrm{m}^2$$
+This will give us a value for the irradiance of the laser
+$$I_{\mathrm{death}\;\mathrm{star}} = \frac{2.24 \times 10^{31} \,W}{10000\pi\, \mathrm{m}^2} = 7.13 \times 10^{26} \frac{W}{\mathrm{m}^2}$$
+Now, comparing this with our laswer we get that the ratio of the two is
+$$\frac{I_{laser}}{I_{\mathrm{death}\;\mathrm{star}}} = \frac{1.91 \times 10^9}{7.13 \times 10^{26}} = 2.68 \times 10^{-18}$$
+This means that while our laser is quite powerful, we don't have to worry about it destroying the planet any time soon. In fact, it would take our laser 
+$$\frac{30\,s}{2.68 \times 10^{-18}} = 1.12\times 10^{19}\,s = 8.52 \times 10^{12}\;\mathrm{years}$$
+to destroy the earth.
+\\
+\\
+The important physics about the Death Star and the Earth came from
+\\
+ \url{https://medium.com/starts-with-a-bang/the-physics-of-the-death-star-c21ccc58ade9#.7vjyr761o}
