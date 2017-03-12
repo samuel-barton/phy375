@@ -1,0 +1,150 @@
+\section*{Problem 1}
+
+In this problem we are asked to find the relation between $\delta$ and the angles in the provided triangle. We first note that this
+triangle is isocoles and thus the two bottom angles are equal, by extension of the definition of isocoles triangles. Next we note that 
+the angle B as labeled in the given triangle must be $\pi - \mathrm{A}$ since the sum of the four angles of any quadrilateral must be 
+$360^\circ$ and the other two angles are formed by lines normal to their edges of the triangle and thus are $90^\circ$ angles.
+\\
+\\
+We use Snell's Law to get the value for $\theta^{'}_1$ remembering that $n_i = 1$ and $n_t = n$
+
+$$\sin\theta_1 = n\sin\theta^{'}_1$$ 
+
+\begin{equation} \label{theta-1-prime}
+	\theta^{'}_1 = \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+\end{equation}
+
+We can now get the value of $\theta^{'}_2$ if we remember that the sum of the angles in a triangle must be $\pi$ radians
+
+$$\theta^{'}_1 + \theta^{'}_2 + \mathrm{B} = \pi$$
+
+\begin{equation*}
+	\theta^{'}_2 = \pi - \mathrm{B} - \theta^{'}_1
+\end{equation*}
+
+Since $\mathrm{B} = \pi - \mathrm{A}$, we can simplify the above equation as follows
+
+$$
+	\theta^{'}_2 = \pi - \theta^{'}_1 - (\pi - \mathrm{A})
+$$
+$$
+	\theta^{'}_2 = \pi - \theta^{'}_1 - \pi + \mathrm{A}
+$$
+$$
+	\theta^{'}_2 = - \theta^{'}_1 + \mathrm{A}
+$$
+$$
+	\theta^{'}_2 = \mathrm{A} - \theta^{'}_1
+$$
+
+
+If we now substitute in equation \ref{theta-1-prime} we get 
+
+\begin{equation} \label{theta-2-prime}
+	\theta^{'}_2 = \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+\end{equation}
+
+With $\theta^{'}_2$, we can now calculate $\theta_2$ by again using Snell's Law, except this time $n_i = n$ and $n_t = 1$.
+
+$$
+	n\sin\theta^{'}_2 = \sin\theta_2
+$$ 
+$$
+	\theta_2 = \sin^{-1}\left(n\sin\theta^{'}_2\right)
+$$
+
+\begin{equation} \label{theta-2}
+	\theta_2 = \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+\end{equation}
+
+We now calculate $\delta_1$ and $\delta_2$ by using the geometric principle that the opposite angles of any two intersecting lines are 
+equal. Thus 
+
+$$
+	\theta_1 = \delta_1 + \theta^{'}_1
+$$
+$$
+	\delta_1 = \theta_1 - \theta^{'}_1
+$$
+
+Using equation \ref{theta-1-prime} we get
+
+\begin{equation} \label{delta-1}
+	\delta_1 = \theta_1 - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+\end{equation}
+
+and
+
+$$
+	\theta_2 = \delta_2 + \theta^{'}_2
+$$
+$$
+	\delta_2 = \theta_2 - \theta^{'}_2
+$$
+
+Using equations \ref{theta-2-prime} and \ref{theta-2} we get
+$$
+	\delta_2 = \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	- \left[\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\right]
+$$
+\begin{equation} \label{delta-2}
+	\delta_2 = \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	- \mathrm{A} + \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+\end{equation}
+
+With values for $\delta_1$ and $\delta_2$ we again use the principle that the sum of the angles of a triangle must be $\pi$ raidans to 
+get the angle C, where C is the third angle in the triangle $\delta_1\delta_2\mathrm{C}$
+
+$$\delta_1 + \delta_2 + \mathrm{C} = \pi$$
+
+\begin{equation} \label{C}
+	\mathrm{C} = \pi - \delta_1 - \delta_2
+\end{equation}
+
+With the value for C we can finally calculate the value $\delta$ by using the geometric theorem that the sum of the interior and exterior
+angles of a line relative to another line must equal $\pi$ radians. In this case the lines are that of the incident ray, and the ray which
+exits the prism. The angle C is the exterior angle to the incident ray relative to the final ray, and the angle $\delta$ is the internal
+angle.
+
+\begin{equation} \label{delta}
+	\delta = \pi - \mathrm{C}
+\end{equation}
+
+Now we begin back-substitution starting with equation \ref{C}.
+
+$$
+	\delta = \pi - (\pi - \delta_1 - \delta_2)
+$$
+
+Next we substitute in equations \ref{delta-1} and \ref{delta-2} to get the final expression for $\delta$
+
+$$
+	\delta = \pi - \left[\pi - \left[\theta_1 - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\right] - 
+	\left[ \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	- \mathrm{A} + \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]\right]
+$$
+$$
+	\delta = \pi - \left[\pi - \theta_1 + \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) - 
+	\sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	+ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+$$
+$$
+	\delta = \pi - \left[\pi - \theta_1 - 
+	\sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	+ \mathrm{A} \right]
+$$
+$$
+	\delta = \pi - \pi + \theta_1 + 
+	\sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	- \mathrm{A}
+$$
+
+And finally we reach the value for $\delta$
+\begin{equation*} \label{delta-simplified}
+	\delta = \theta_1 + 
+	\sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]
+  	- \mathrm{A}	
+\end{equation*}
+This relation gives us $\delta$ as a function of $\theta_1$ and A. 
+
+

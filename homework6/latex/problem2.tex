@@ -1,0 +1,243 @@
+\section*{Problem 2}
+
+We are now to calculate the total transmittance for the light ray we just discussed in problem one passing through the same isocoles
+triangle. First off we must remember some important definitions
+\\
+\\
+For our two surfaces we get that
+
+\begin{equation} \label{T_par}
+	\mathrm{T}_\parallel = \mathrm{T}_{\parallel_1} \times \mathrm{T}_{\parallel_2} =
+	\mathrm{t}_{\parallel_1}^2 \times \mathrm{t}_{\parallel_2}^2 
+\end{equation}
+
+\begin{equation} \label{T_per}
+	\mathrm{T}_\bot = \mathrm{T}_{\bot_1} \times \mathrm{T}_{\bot_2} =
+	\mathrm{t}_{\bot_1}^2 \times \mathrm{t}_{\bot_2}^2 
+\end{equation}
+
+\begin{equation} \label{t_par}
+	\mathrm{t}_\parallel = \dfrac{2\sin\theta_t\cos\theta_i}{\sin(\theta_i + \theta_t)}
+\end{equation}
+	
+\begin{equation} \label{t_per}
+	\mathrm{t}_\bot = \dfrac{2\sin\theta_t\cos\theta_i}{\sin(\theta_i + \theta_t)\cos(\theta_i - \theta_t)}
+\end{equation}
+
+We will use the above equations for the perpendicular and parallel transmittance to generate both $\mathrm{T}_\bot(\theta_1)$ and 
+$\mathrm{T}_\parallel(\theta_1)$. 
+\\
+\\ 
+
+First we consider the value of $\mathrm{T}_\parallel$. We insert our values for $\theta_i$ and $\theta_t$ on the first surface and get 
+
+$$
+	\mathrm{t}_{\parallel_1} = \dfrac{2\sin\theta^{'}_1\cos\theta_1}{\sin(\theta_1 + \theta^{'}_1)}
+$$
+\begin{equation} \label{t-par-1}
+	\mathrm{t}_{\parallel_1} = 
+	\dfrac
+	{
+		2\sin\big[\sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\big]\cos\theta_1
+	}
+	{
+		\sin(\theta_1 + \sin^{-1}\left(\frac{\sin\theta_1}{n}\right))
+	}
+\end{equation}
+
+Now we consider the parallel component of the transmittance on the second surface where $\theta_i$ and $\theta_t$ are $\theta^{'}_2$ and $\theta_2$ 
+respectively
+
+$$
+	\mathrm{t}_{\parallel_2} = 
+	\dfrac
+	{
+		2\sin\theta_2\cos\theta^{'}_2
+	}
+	{
+		\sin(\theta_2 + \theta^{'}_2)
+	}
+$$
+
+\begin{equation} \label{t-par-2}
+	\mathrm{t}_{\parallel_2} = 
+	\dfrac
+	{
+		2\sin\big[ \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right] \big]
+		\cos\big[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \big]
+	}
+	{
+		\sin
+		(
+			 \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\right]) + 
+			 \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+		)
+	}
+\end{equation}
+
+With these we can calculate the total parallel transmittance
+
+\begin{equation} \label{T-par}
+	\mathrm{T}_\parallel = 
+	\Bigg[
+	\dfrac
+	{
+		2\sin\big[\sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\big]\cos\theta_1
+	}
+	{
+		\sin(\theta_1 + \sin^{-1}\left(\frac{\sin\theta_1}{n}\right))
+	}
+	\Bigg]^2
+	\;\;+\;\;
+	\Bigg[
+	\dfrac
+	{
+		2\sin\big[ \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right] \big]
+		\cos\big[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \big]
+	}
+	{
+		\sin
+		(
+			 \sin^{-1}(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\right]) + 
+			 \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+		)
+	}
+	\Bigg]^2
+\end{equation}
+
+With the parallel transmittance out of the way, we now calculate the perpendicular transmittance for both surfaces using the same methodology as 
+above. On the first surface $\theta_i = \theta_1$ and $\theta_t = \theta_1^{'}$.
+
+$$
+	\mathrm{t}_{\bot_1} = \dfrac{2\sin\theta_1^{'}\cos\theta_1}{\sin(\theta_1 + \theta_1^{'})\cos(\theta_1 - \theta_1^{'})}
+$$
+
+\begin{equation} \label{t-per-1}
+	\mathrm{t}_{\bot_1} = 
+	\dfrac
+	{
+		2\sin\big[\sin^{-1}\left(\frac{\sin\theta_1}{n}\right)\big]\cos\theta_1
+	}
+	{
+		\sin(\theta_1 + \sin^{-1}\left(\frac{\sin\theta_1}{n}\right))\cos(\theta_1 - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right))
+	}
+\end{equation}
+
+Now we consider the second surface, where $\theta_i$ and $\theta_t$ are $\theta^{'}_2$ and $\theta_2$ respectively
+
+\begin{equation} \label{t-per-2}
+	\mathrm{t}_{\bot_2} = 
+	\dfrac
+	{
+		2\sin\theta_2\cos\theta^{'}_2
+	}
+	{
+		\sin(\theta^{'}_2 + \theta_2)\cos(\theta^{'}_2 - \theta_2)
+	}
+\end{equation}
+
+We cannot fit the fully expanded version of this on one line, so we split it up below.
+
+$$
+	\mathrm{t}_{\bot_2} = 
+	\dfrac
+	{
+		2\sin
+		\big[ 
+			\sin^{-1}
+			\big(
+				n
+				\sin
+				\left[
+					\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) 
+				\right]
+			\big)
+		\big]
+		\cos
+		\big[ 
+			\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+		\big]
+	}
+	{
+		\sin
+		\Big[ 
+			\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+			+ 
+			\sin^{-1}\big(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]\big)
+		\Big]
+	}
+	\;\;
+	\times
+$$
+$$
+	\dfrac
+	{
+		1
+	}
+	{
+		\cos
+		\Big[
+			\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+			- 
+			\sin^{-1}\big(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]\big)
+		\Big]
+	}
+$$
+
+We combine equations \ref{t-per-1} and \ref{t-per-2} according to the relation defined by equation \ref{T_per} to get the value for the perpendicular
+transmittance
+
+$$
+	\mathrm{T}_\bot = 
+	\Bigg[
+	\dfrac
+	{
+		2\sin\theta_2\cos\theta^{'}_2
+	}
+	{
+		\sin(\theta^{'}_2 + \theta_2)\cos(\theta^{'}_2 - \theta_2)
+	}
+	\Bigg]^2
+	\;
+	+
+	\;
+	\Bigg[
+	\dfrac
+	{
+		2\sin
+		\big[ 
+			\sin^{-1}\big(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]\big)
+		\big]
+		\cos
+		\big[ 
+			\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+		\big]
+	}
+	{
+		\sin
+		\Big[ 
+			\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+			+ 
+			\sin^{-1}\big(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]\big)
+		\Big]
+	}
+	\;\;
+	\times
+$$
+$$
+	\dfrac
+	{
+		1
+	}
+	{
+		\cos
+		\Big[
+			\mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right)
+			- 
+			\sin^{-1}\big(n\sin\left[ \mathrm{A} - \sin^{-1}\left(\frac{\sin\theta_1}{n}\right) \right]\big)
+		\Big]
+	}
+	\Bigg]^2
+$$
+
+We will see in the next problem how the parallel and perpendicular transmittance relate to the incident angle as it goes from $0^\circ$ to $90^\circ$
